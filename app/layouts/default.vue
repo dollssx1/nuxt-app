@@ -1,11 +1,16 @@
+<script setup lang="ts">
+const input1 = ref('')
+</script>
+
 <template>
   <div>
     <header>
       <nav class="navbar">
         <div class="nav-container">
           <NuxtLink to="/" class="nav-logo">
-            My App
+            <AppLogo icon-only />
           </NuxtLink>
+          <BaseInput  required size="medium" v-model="input1" :show-search-icon="true" placeholder="검색"></BaseInput>
           <ul class="nav-menu">
             <li class="nav-item">
               <NuxtLink to="/" class="nav-link">Home</NuxtLink>
