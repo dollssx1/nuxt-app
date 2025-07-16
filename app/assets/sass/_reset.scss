@@ -1,0 +1,200 @@
+/* 모던 CSS 리셋 */
+
+/* 박스 사이징 규칙 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 폰트 크기 확대 방지 */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* 기본 마진 제거 */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0;
+}
+
+/* 리스트 역할을 가진 ul, ol 요소의 기본 스타일 제거 */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* body 기본 설정 */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 제목과 인터랙티브 요소의 줄 높이 단축 */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* 제목의 텍스트 줄바꿈 균형 */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* 클래스가 없는 a 요소의 기본 스타일 */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* 이미지 작업을 쉽게 만들기 */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* 입력 요소와 버튼의 폰트 상속 */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+/* rows 속성이 없는 textarea가 너무 작지 않도록 */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* 앵커된 요소에 추가 스크롤 마진 */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* 모션을 선호하지 않는 사용자를 위한 애니메이션 제거 */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* 추가 모던 리셋 */
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+/* 기본 버튼 스타일 제거 */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+    background-color: transparent;
+    background-image: none;
+}
+
+/* 기본 fieldset 스타일 제거 */
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* 기본 legend 스타일 제거 */
+legend {
+    padding: 0;
+}
+
+/* 기본 리스트 스타일 제거 */
+ol,
+ul,
+menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* 기본 테이블 스타일 제거 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 기본 hr 스타일 제거 */
+hr {
+    border: none;
+    border-top: 1px solid;
+    margin: 0;
+    color: inherit;
+}
+
+/* 기본 summary 스타일 제거 */
+summary {
+    display: list-item;
+    cursor: pointer;
+}
+
+/* 기본 dialog 스타일 제거 */
+dialog {
+    padding: 0;
+}
+
+/* 기본 폰트의 일관성 향상 */
+code,
+kbd,
+samp,
+pre {
+    font-family: ui-monospace, SFMono-Regular, 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+    font-size: 1em;
+}
+
+/* 줄바꿈 개선 */
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 루트 스택 컨텍스트 생성 */
+#__nuxt,
+#app {
+    isolation: isolate;
+}

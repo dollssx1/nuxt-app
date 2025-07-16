@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "notion": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@smithery/notion",
+        "--key",
+        "10b246ac-69d1-4f84-a84b-dfff0416980a",
+        "--profile",
+        "anxious-cat-TtNu5V"
+      ],
+      "disabled": false,
+      "autoApprove": [
+        "update-block"
+      ]
+    }
+  }
+}
